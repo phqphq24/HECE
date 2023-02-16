@@ -131,7 +131,7 @@ class Span_Classify(nn.Module):
             temp_conv_len = conv_len_b[i]
             conv_clause_len = conv_clause_len_b[i]
             for j in range(temp_conv_len):
-                if logistic(utt_prob[i][j]) > 0.4
+                if logistic(utt_prob[i][j]) > 0.5
                     temp_utt_pred_mask += [1] * conv_clause_len[j]
                 else:
                     temp_utt_pred_mask += [0] * conv_clause_len[j]
