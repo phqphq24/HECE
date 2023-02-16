@@ -203,6 +203,6 @@ class GraphNN(nn.Module):
         assert max(doc_len) == max_doc_len
 
         for i, gnn_layer in enumerate(self.gnn_layer_stack):
-            doc_sents_h, attn = gnn_layer(doc_sents_h, adj)
+            doc_sents_h， attn = gnn_layer(doc_sents_h, adj)
 
-        return doc_sents_h, attn
+        return doc_sents_h
