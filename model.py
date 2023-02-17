@@ -80,7 +80,6 @@ class Span_Classify(nn.Module):
         self.feat_dim = configs.feat_dim
         self.emo_dim = configs.emo_dim
         self.pos_dim = configs.pos_dim
-        self.word_token = configs.word_token
         self.attention = MultiHeadAttention(in_features_1=self.feat_dim, in_features_2=self.feat_dim, head_num=12)
         self.out_span = nn.Linear(configs.feat_dim*2, 1)
         self.dropout = nn.Dropout(configs.dropout)
